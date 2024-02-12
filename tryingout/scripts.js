@@ -1,6 +1,6 @@
 // add tasks
 
-let tasksList =[];
+let tasksList =[]; bhn 
 let taskInput = document.querySelector(".taskinp");
 let taskDiv = document.querySelector(".tasks");
 let taskAdd = document.querySelector(".taskbutton");
@@ -78,3 +78,30 @@ function retrieveTasks(){
 }
 
 retrieveTasks();
+
+//login
+var ObjPeople=[
+    {
+        USER : "arjun25.balaji@gmail.com",
+        Password : "Arjun123"
+    },
+    {
+        USER : "august2004@gmail.com",
+        Password : "August123"
+    }
+
+]
+function getInfo(){
+    var USER = document.getElementById("USER").value
+    var Password = document.getElementById("Password").value
+    for (var i=0; i<ObjPeople.length;i++)
+    {
+        if(USER == ObjPeople[i].USER&& Password==ObjPeople[i].Password )
+        {
+            console.log(USER+"is logged in!!!")
+            location.replace('index.html')
+            return
+        }
+    }
+
+}
