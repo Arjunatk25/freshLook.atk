@@ -118,7 +118,7 @@
                     <input required="true" name="" type="password" id="Password">
                     <label>Password</label>
                 </div>
-               <div onclick="getInfo()" class="button"> <a href="scripts.js" class="" >Submit</a>
+               <div onclick="getInfo()" class="button"> <a  class="" >Submit</a>
                </div>
             </form>
         </div>
@@ -126,7 +126,34 @@
 
 
 </body>
-<script src="scripts.js" ></script>
+<script >
+
+    var ObjPeople=[
+    {
+        USER : "arjun25.balaji@gmail.com",
+        Password : "Arjun123"
+    },
+    {
+        USER : "august2004@gmail.com",
+        Password : "August123"
+    }
+
+]
+function getInfo(){
+    var USER = document.getElementById("USER").value
+    var Password = document.getElementById("Password").value
+    for (var i=0; i<ObjPeople.length;i++)
+    {
+        if(USER == ObjPeople[i].USER&& Password==ObjPeople[i].Password )
+        {
+            console.log(USER+"is logged in!!!")
+            location.replace('index.html')
+            return
+        }
+    }
+
+}
+</script>
 <style>
     .login-box{
     background-image: url('https://i.pinimg.com/originals/17/22/21/1722217c857bccb5c2dd5d4e41f8dffe.jpg');
